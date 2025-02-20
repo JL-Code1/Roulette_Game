@@ -11,7 +11,7 @@ connectDB();
 // Set up GraphQL
 setupGraphQL(app);
 
-const PORT = process.env.PORT || 5001; // 5000 not working
+const PORT = process.env.PORT || 5173
 
 app.listen(PORT, () => {
     console.log(`✅ Server running on port ${PORT}`);
