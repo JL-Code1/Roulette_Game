@@ -1,28 +1,14 @@
-const { ApolloServer, gql } = require("apollo-server-express");
+const { ApolloServer } = require("apollo-server-express");
+const { typeDefs, resolvers } = require("./schema");
 
-// GraphQL Schema (typeDefs)
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-// Resolvers
-const resolvers = {
-  Query: {
-    hello: () => "Welcome to the Roulette GraphQL API! 🎰",
-  },
-};
-
-// Apollo GraphQL
 const setupGraphQL = (app) => {
     const server = new ApolloServer({ typeDefs, resolvers });
 
-    // Start the Apollo Server before applying middleware
+    //start the Apollo server
     server.start().then(() => {
         server.applyMiddleware({ app });
-        console.log("✅ GraphQL Server Ready at /graphql");
-    });
-};
-
+        console.log(`✅ GraphQL ready at /graphql`);
+    }
+    );
+}
 module.exports = setupGraphQL;

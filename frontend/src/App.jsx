@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/App.css'
 import RouletteWheel from './components/RouletteWheel'
 import BettingTable from './components/BettingTable' 
 

@@ -1,4 +1,4 @@
-import "./BettingTable.css";
+import "../styles/BettingTable.css";
 import PropTypes from "prop-types";
 
 const BettingTable = ({ onBet }) => {
