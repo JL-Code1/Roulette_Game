@@ -13,6 +13,10 @@ const typeDefs = gql`
         user: User!
     }
 
+    type BetResult {
+        message: String!
+    }
+
     type Query {
         getUser(id: ID!): User
     }
@@ -20,6 +24,7 @@ const typeDefs = gql`
     type Mutation {
         register(username: String!, email: String!, password: String!): AuthPayload
         login(email: String!, password: String!): AuthPayload
+        placeBet(amount: Float!, betType: String!): BetResult
     }
 `;
 
