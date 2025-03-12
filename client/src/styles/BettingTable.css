@@ -1,0 +1,88 @@
+.betting-table {
+    text-align: center;
+    padding: 20px;
+}
+
+.chip-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.chip {
+    padding: 8px 15px;
+    border-radius: 50%;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.selected-chip {
+    border: 3px solid red;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.zero-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.number-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.row {
+    display: flex;
+    gap: 3px;
+}
+
+.bet-cell {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid black;
+    background-color: #444;
+    color: white;
+}
+
+.red-cell {
+    background-color: red;
+}
+
+.black-cell {
+    background-color: black;
+}
+
+.green-cell {
+    background-color: green;
+}
+
+.chip-on-bet {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gold;
+    color: black;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid black;
+}
