@@ -9,14 +9,15 @@ const app = express();
 const allowedOrigins = [
     "http://localhost:5173", 
     "http://localhost:5001",
-    "https://studio.apollographql.com"
+    "https://studio.apollographql.com",
+    "https://roulette-game-8vp5.onrender.com"
 ]; // Add frontend URL to this array, maybe github pages URL
 
 const corsOptions = {
-    origin: "http://localhost:5173", // ✅ Set frontend explicitly
-    credentials: true, // ✅ Allow credentials (important for tokens)
-    allowedHeaders: ["Content-Type", "Authorization"], // ✅ Allow required headers
-    methods: ["GET", "POST", "OPTIONS"] // ✅ Allow only necessary methods
+    origin: allowedOrigins, 
+    credentials: true, 
+    allowedHeaders: ["Content-Type", "Authorization"], 
+    methods: ["GET", "POST", "OPTIONS"] 
   };
   
   app.use(cors(corsOptions));

@@ -3,7 +3,7 @@ import { setContext } from "@apollo/client/link/context";
 
 // Set up the GraphQL endpoint
 const httpLink = createHttpLink({
-  uri: "http://localhost:5001/graphql", // Make sure this matches your backend URL
+  uri: "mongodb+srv://dbRoulette:NextLevel+69!@cluster0.hvj7m.mongodb.net/", // Make sure this matches your backend URL
   credentials: "include", // Allow cookies and authentication headers
 });
 
