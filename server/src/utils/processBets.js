@@ -8,11 +8,11 @@ const processBets = (bets, spinResultString, user) => {
     let betResults = [];
 
     for (const bet of bets) {
-        let { amount, betType, betValue } = bet;
+        let { amount, betType, betValue } = bet; //destructure bet object
         console.log(`Processing bet: ${betType} ${betValue} $${amount}`);
 
-        // Convert to lowercase early for consistency
-        const normalizedBetType = betType.toLowerCase();
+        // Convert to lowercase early for consistency for bet index
+        const normalizedBetType = betType.toLowerCase(); 
         const normalizedBetValue = betValue.toLowerCase();
 
         // Validate bet amount

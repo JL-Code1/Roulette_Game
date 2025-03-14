@@ -58,7 +58,7 @@ const Roulette = () => {
                 setBalance(data.placeBet.balance);
             }
         } catch (error) {
-            console.error("❌ Error placing bet:", error.message);
+            console.error("❌ Error placing bet:", error.message); // CURRENT PROBLEM
         }
         
     };

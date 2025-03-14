@@ -21,7 +21,7 @@ const BettingTable = ({ onBet, onSpin, resetBets }) => {
 
     // State for placed bets and chip value
     const [bets, setBets] = useState({});
-    const [betAmount, setBetAmount] = useState(10); // Default chip value
+    const [betAmount, setBetAmount] = useState(10); // Needs to be dynamic to allowed bets.
 
     // Reset bets when requested by parent (Roulette.jsx)
     useEffect(() => {
@@ -70,7 +70,7 @@ const BettingTable = ({ onBet, onSpin, resetBets }) => {
 
         onBet(formattedBets); // Send bets to parent (Roulette.jsx)
         onSpin(); // Trigger spin
-        setBets([]); // Reset bets after spin FINALLY!!
+        setBets([]); // Reset bets after spin FINALLY!! nvm still stale state
     };
 
     return (

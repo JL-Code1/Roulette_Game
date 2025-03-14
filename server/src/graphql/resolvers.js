@@ -34,7 +34,7 @@ const resolvers = {
               // Step 2: Process bets using `processBets.js`
               const { totalBetAmount, totalWinnings, betResults } = processBets(bets, spinResult, user);
 
-              // Step 3: Deduct bet amount & apply winnings
+              // Step 3: Check if user has enough balance
               if (user.balance < totalBetAmount) throw new Error("Insufficient balance");
               user.balance -= totalBetAmount;
               user.balance += totalWinnings;

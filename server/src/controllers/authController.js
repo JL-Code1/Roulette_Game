@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 const register = async (_, { username, email, password }) => {
     try {
-        const existingUser = await User.findOne({ email });
+        const existingUser = await User.findOne({ email }); 
         if (existingUser) {
             throw new Error("Email is already in use. Please login.");
         }

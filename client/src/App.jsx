@@ -1,22 +1,21 @@
-import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Login from "./pages/Login";
 import Roulette from "./pages/Roulette";
-import client from "./apolloClient";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => !!localStorage.getItem("token"));
 
   // Update authentication state when the token changes
-  useEffect(() => {
-    const checkAuth = () => setIsAuthenticated(!!localStorage.getItem("token"));
-    window.addEventListener("storage", checkAuth);
-    return () => window.removeEventListener("storage", checkAuth);
-  }, []);
+  //useEffect(() => {
+    //const checkAuth = () => setIsAuthenticated(!!localStorage.getItem("token"));
+    //window.addEventListener("storage", checkAuth);
+    //return () => window.removeEventListener("storage", checkAuth);
+  //}, []);
+
+  // is not needed due to it doing the auth in main ^
 
   return (
-    <ApolloProvider client={client}>
       <Router>
         <Routes>
           <Route path="/" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
@@ -26,7 +25,6 @@ function App() {
           />
         </Routes>
       </Router>
-    </ApolloProvider>
   );
 }
 
